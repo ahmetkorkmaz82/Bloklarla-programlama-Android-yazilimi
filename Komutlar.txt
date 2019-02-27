@@ -1,19 +1,19 @@
-İleri : 		F	Cevap:	f
+Ileri : 		F	Cevap:	f
 Geri:			B	Cevap:	b
-Sağa:			R	Cevap:	r
+Saga:			R	Cevap:	r
 Sola:			L	Cevap:	l
 Bekle:			D	Cevap:	t
-Yeşile Dön:		y	Cevap:	t
-Kırmızıya Dön:		k	Cevap:	t
-Maviye Dön:		m	Cevap:	t
-Işıkları kapat:		z	Cevap:	t
-Beyaza Dön:		w	Cevap:	t
-Çizgi önde mi:		O	true:1	false:0	
-Sağda mı:		S	true:1	false:0	
-Solda mı:		P	true:1	false:0	
-Yeşilde miyim:		Y	true:1	false:0	
-Kırmızıda mıyım:	K	true:1	false:0	
+Yesile DÃ¶n:		y	Cevap:	t
+Kirmiziya DÃ¶n:		k	Cevap:	t
+Maviye DÃ¶n:		m	Cevap:	t
+Isiklari kapat:		z	Cevap:	t
+Beyaza DÃ¶n:		w	Cevap:	t
+Ã‡izgi Ã¶nde mi:		O	true:1	false:0	
+Sagda mi:		S	true:1	false:0	
+Solda mi:		P	true:1	false:0	
+Yesilde miyim:		Y	true:1	false:0	
+Kirmizida miyim:	K	true:1	false:0	
 Mavide miyim:		M	true:1	false:0	
-Önde engel var mı:	E	true:1	false:0	
+Ã–nde engel var mi:	E	true:1	false:0	
 
 	
