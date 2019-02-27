@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="71.8dp">
+    <ImageView
+        android:id="@+id/tekrarla"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/kosulust3"
+        android:contentDescription="@string/eger" />
+
+    <ImageView
+        android:id="@+id/egerYan"
+        android:layout_width="21dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:paddingTop="33dp"
+        android:paddingBottom="25dp"
+        android:contentDescription="@string/eger"
+        android:foregroundGravity="left"
+        android:layout_marginBottom="-0.1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/kosulyan3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tekrarla"
+        />
+
+    <ImageView
+        android:id="@+id/tekrarlaAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/kosulalt3"
+        app:layout_constraintLeft_toLeftOf="@+id/egerYan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/eger" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTekrarla"
+        app:layout_constraintLeft_toLeftOf="@+id/tekrarla"
+        app:layout_constraintStart_toStartOf="@+id/tekrarla"
+        android:contentDescription="@string/eger" />
+
+    <TextView
+        android:id="@+id/txtTekrarla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trkids"
+        android:text="@string/tekrarla"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintEnd_toEndOf="@id/tekrarla"
+        app:layout_constraintBottom_toBottomOf="@+id/tekrarla"
+        app:layout_constraintStart_toStartOf="@+id/tekrarla"
+        app:layout_constraintTop_toTopOf="@+id/tekrarla" />
+    <ImageView
+        android:id="@+id/tekrarlaSign"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="66dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:visibility="invisible"
+        android:src="@drawable/tekrarla"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTekrarla"
+        app:layout_constraintEnd_toEndOf="@+id/tekrarla"
+        app:layout_constraintRight_toRightOf="@+id/tekrarla"
+        app:layout_constraintStart_toStartOf="@+id/tekrarla"
+        android:contentDescription="@string/eger" />
+
+
+</android.support.constraint.ConstraintLayout>

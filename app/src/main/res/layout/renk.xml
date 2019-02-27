@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/renkDegis"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtRenk"
+        app:layout_constraintLeft_toLeftOf="@+id/renkDegis"
+        app:layout_constraintStart_toStartOf="@+id/renkDegis" />
+
+    <TextView
+        android:id="@+id/txtRenk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/renk"
+        android:textColor="@color/white"
+        android:fontFamily="@font/trkids"
+        android:layout_marginStart="0dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/renkDegis"
+        app:layout_constraintEnd_toEndOf="@+id/renkDegis"
+        app:layout_constraintStart_toStartOf="@+id/renkDegis"
+        app:layout_constraintTop_toTopOf="@+id/renkDegis" />
+    <ImageView
+        android:id="@+id/renkDegisKareCerceve"
+        android:layout_width="30dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="90dp"
+        android:adjustViewBounds="true"
+        android:background="@color/black"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/renkDegis"
+        app:layout_constraintStart_toStartOf="@+id/renkDegis" />
+    <ImageView
+        android:id="@+id/renkDegisKare"
+        android:layout_width="28dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="91dp"
+        android:adjustViewBounds="true"
+        android:background="@color/dongu"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/renkDegis"
+        app:layout_constraintStart_toStartOf="@+id/renkDegis" />
+
+</android.support.constraint.ConstraintLayout>

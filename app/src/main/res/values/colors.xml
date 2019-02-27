@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="translucent">#00000000</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="black">#000000</color>
+    <color name="icon">#607d8b</color>
+    <color name="white">#FFFFFF</color>
+    <color name="hareket">#DF0041</color>hareket
+    <color name="karar">#F1A2B8</color>
+    <color name="matematik">#78b1dc</color>
+    <color name="dongu">#4DD14A</color>
+    <color name="background">#FF5252</color>
+    <color name="popup">#b4eaf1</color>
+    <color name="mainbackground">#00BCD4</color>
+    <color name="degisken">#a27edc</color>
+    <color name="fonksiyon">#FFAB1A</color>
+
+
+</resources>

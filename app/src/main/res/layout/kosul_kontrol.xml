@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/sart"
+    android:layout_height="71.8dp">
+    <ImageView
+        android:id="@+id/eger"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/kosulust" />
+
+    <ImageView
+        android:id="@+id/egerYan"
+        android:layout_width="21dp"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:paddingTop="33dp"
+        android:paddingBottom="25dp"
+        android:layout_marginBottom="-0.1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/kosulyan"
+        app:layout_constraintStart_toStartOf="@+id/eger"
+        app:layout_constraintTop_toBottomOf="@+id/eger"
+        app:layout_constraintBottom_toTopOf="@id/egerAlt"/>
+
+    <ImageView
+        android:id="@+id/egerAlt"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/kosulalt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/egerYan"/>
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEger"
+        app:layout_constraintLeft_toLeftOf="@+id/eger"
+        app:layout_constraintStart_toStartOf="@+id/eger"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/txtEger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eger"
+        android:textColor="@color/white"
+        android:fontFamily="@font/trkids"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/eger"
+        app:layout_constraintEnd_toEndOf="@+id/eger"
+        app:layout_constraintStart_toStartOf="@+id/eger"
+        app:layout_constraintTop_toTopOf="@+id/eger" />
+    <ImageView
+        android:id="@+id/egerSign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="60dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:background="@color/translucent"
+        android:src="@drawable/tik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEger"
+        app:layout_constraintEnd_toEndOf="@+id/eger"
+        app:layout_constraintRight_toRightOf="@+id/eger"
+        app:layout_constraintStart_toStartOf="@+id/eger" />
+
+</android.support.constraint.ConstraintLayout>

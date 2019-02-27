@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools"
+    <ImageView
+        android:id="@+id/Stop"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket"
+         />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStop"
+        app:layout_constraintLeft_toLeftOf="@+id/Stop"
+        app:layout_constraintStart_toStartOf="@+id/Stop" />
+    <TextView
+        android:id="@+id/txtStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:fontFamily="@font/trkids"
+        android:layout_marginStart="40dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/stop"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/Stop"
+        app:layout_constraintStart_toStartOf="@+id/Stop"
+        app:layout_constraintTop_toTopOf="@+id/Stop" />
+    <ImageView
+        android:id="@+id/stopsign"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="23dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/stopsign"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStop"
+        app:layout_constraintStart_toStartOf="@+id/Stop" />
+
+</android.support.constraint.ConstraintLayout>

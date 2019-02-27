@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/adet1"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:scaleType="fitStart"
+        android:src="@drawable/adet"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="7dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/adet1"
+        app:layout_constraintLeft_toLeftOf="@+id/adet1"
+        app:layout_constraintStart_toStartOf="@+id/adet1" />
+
+    <TextView
+        android:id="@+id/txtSart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/defa"
+        android:fontFamily="@font/trkids"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/adet1"
+        app:layout_constraintStart_toStartOf="@+id/adet1"
+        app:layout_constraintTop_toTopOf="@+id/adet1" />
+
+    <TextView
+        android:id="@+id/defaShortToText"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:fontFamily="@font/trkids"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/translucent"
+        android:maxLength="2"
+        android:maxLines="2"
+        android:padding="0dp"
+        android:shadowColor="@color/white"
+        android:textColor="@color/white"
+        android:textColorHighlight="@color/white"
+        android:textColorHint="@color/white"
+        android:textColorLink="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/adet1"
+        app:layout_constraintStart_toStartOf="@+id/adet1"
+        app:layout_constraintTop_toTopOf="@+id/adet1"
+        android:text="1"
+        />
+</android.support.constraint.ConstraintLayout>

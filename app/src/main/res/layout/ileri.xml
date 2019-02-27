@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ileri"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtIleri"
+        app:layout_constraintLeft_toLeftOf="@+id/ileri"
+        app:layout_constraintStart_toStartOf="@+id/ileri" />
+    <ImageView
+        android:id="@+id/forwardsign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/forward"
+        app:layout_constraintBottom_toBottomOf="@+id/txtIleri"
+        app:layout_constraintStart_toStartOf="@+id/ileri" />
+    <TextView
+        android:id="@+id/txtIleri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ileri"
+        android:textColor="@color/white"
+        android:fontFamily="@font/trkids"
+        android:layout_marginStart="40dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ileri"
+        app:layout_constraintEnd_toEndOf="@+id/ileri"
+        app:layout_constraintStart_toStartOf="@+id/ileri"
+        app:layout_constraintTop_toTopOf="@+id/ileri" />
+
+</android.support.constraint.ConstraintLayout>

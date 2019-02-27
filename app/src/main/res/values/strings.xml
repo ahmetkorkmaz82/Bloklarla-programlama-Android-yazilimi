@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name" translatable="false">BuKiM</string>
+    <string name="delete" translatable="false">Sil</string>
+    <string name="reset" translatable="false">Görüntüyü Sıfırla</string>
+    <string name="zoomin" translatable="false">Yaklaş</string>
+    <string name="zoomout" translatable="false">Uzaklaş</string>
+    <string name="hareket">Action</string>
+    <string name="start">Start</string>
+    <string name="karar">Decide</string>
+    <string name="matematik">Maths</string>
+    <string name="dongu">Loop</string>
+    <string name="fonksiyon">Function</string>
+    <string name="degisken">Variable</string>
+    <string name="baglan">Connect</string>
+    <string name="basariylabaglanildi">Successfully Connected</string>
+    <string name="baglantihatasi">Could not Connect</string>
+    <string name="baglantikesildi">Bluetooth Disconnected</string>
+    <string name="kapat">Close</string>
+    <string name="eger">If</string>
+    <string name="tekrarla">Repeat</string>
+    <string name="ileri">One step fwd</string>
+    <string name="saga">Turn 90º right</string>
+    <string name="sola">Turn 90º left</string>
+    <string name="stop">One second wait</string>
+    <string name="geri">One step rev</string>
+    <string name="btChoice">Choose Your Robot</string>
+    <string name="noPairedDevices">No Paired Device(s)</string>
+    <string name="karede">square</string>
+    <string name="engel">obstacle</string>
+    <string name="cizgi">line</string>
+    <string name="renk">Turn</string>
+    <string name="defa">times</string>
+    <string name="fonksiyon_ad_giriniz">Type Function Name</string>
+    <string name="en_fazla_15_karakter">Maximum 15 characters</string>
+    <string name="tamam">Ok</string>
+    <string name="iptal">Cancel</string>
+    <string name="hosgeldiniz">Welcome to Amusing Learning to Code</string>
+    <string name="fonk_ad_giriniz">Please Type A Name</string>
+    <string name="bluetooth_desteklenmiyor">Your Device Does Not Support Bluetooth.</string>
+    <string name="okuma_hatasi">An Error Occured While Reading Data.</string>
+    <string name="bluetooth_aciliyor">Bluetooth Turning On…</string>
+    <string name="robota_baglanmalisin">You Must Connect To a Robot!</string>
+    <string name="eslanmiş_robot_bulunamadi">No Paired Robot(s)!</string>
+    <string name="baglanti_hatasi">No Response in the Expected Time</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="see_you">Hope To See You Soon</string>
+    <string name="defametin">Times</string>
+    <string name="eger_degil">If not</string>
+</resources>

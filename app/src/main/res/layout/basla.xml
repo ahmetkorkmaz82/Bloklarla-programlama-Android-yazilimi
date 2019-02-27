@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/basla"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/blok" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/yesilisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBasla"
+        app:layout_constraintLeft_toLeftOf="@+id/basla"
+        app:layout_constraintStart_toStartOf="@+id/basla" />
+    <TextView
+        android:id="@+id/txtBasla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textColor="@color/white"
+        android:fontFamily="@font/trkids"
+        android:layout_marginBottom="5.5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/basla"
+        app:layout_constraintEnd_toEndOf="@+id/basla"
+        app:layout_constraintStart_toStartOf="@+id/basla"
+        app:layout_constraintTop_toTopOf="@+id/basla" />
+</android.support.constraint.ConstraintLayout>

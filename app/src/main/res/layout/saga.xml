@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Right"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket" />
+
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSaga"
+        app:layout_constraintLeft_toLeftOf="@+id/Right"
+        app:layout_constraintStart_toStartOf="@+id/Right" />
+
+    <ImageView
+        android:id="@+id/rightsign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/right"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSaga"
+        app:layout_constraintStart_toStartOf="@+id/Right" />
+
+    <TextView
+        android:id="@+id/txtSaga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/trkids"
+        android:gravity="center_horizontal"
+        android:text="@string/saga"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/Right"
+        app:layout_constraintEnd_toEndOf="@+id/Right"
+        app:layout_constraintStart_toStartOf="@+id/Right"
+        app:layout_constraintTop_toTopOf="@+id/Right" />
+
+
+</android.support.constraint.ConstraintLayout>

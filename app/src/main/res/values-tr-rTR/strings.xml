@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">BuKiM</string>
+    <string name="delete" translatable="false">Sil</string>
+    <string name="reset" translatable="false">Görüntüyü Sıfırla</string>
+    <string name="zoomin" translatable="false">Yaklaş</string>
+    <string name="zoomout" translatable="false">Uzaklaş</string>
+    <string name="hareket">Eylem</string>
+    <string name="start">Başla</string>
+    <string name="karar">Karar</string>
+    <string name="matematik">İşlem</string>
+    <string name="dongu">Döngü</string>
+    <string name="fonksiyon">Fonksiyon</string>
+    <string name="degisken">Değişken</string>
+    <string name="baglan">Bağlan</string>
+    <string name="basariylabaglanildi">Başarıyla Bağlanıldı</string>
+    <string name="baglantihatasi">Bağlantı Sağlanamadı</string>
+    <string name="baglantikesildi">Bluetooth Bağlantısı Kesildi</string>
+    <string name="kapat">Kapat</string>
+    <string name="eger">Eğer</string>
+    <string name="tekrarla">Tekrarla</string>
+    <string name="ileri">Bir kare ileri</string>
+    <string name="saga">90º sağa dön</string>
+    <string name="sola">90º sola dön</string>
+    <string name="stop">1 saniye bekle</string>
+    <string name="geri">Bir kare geri</string>
+    <string name="btChoice">Robotunuzu Seçiniz</string>
+    <string name="noPairedDevices">Eşleşmiş Cihaz Bulunamadı</string>
+    <string name="karede">karede</string>
+    <string name="defa">defa</string>
+    <string name="cizgi">çizgi</string>
+    <string name="renk">Renk</string>
+    <string name="fonksiyon_ad_giriniz">Fonksiyon Adı Giriniz</string>
+    <string name="en_fazla_15_karakter">En Fazla 15 Karakter</string>
+    <string name="tamam">Tamam</string>
+    <string name="engel">ön engel</string>
+    <string name="iptal">İptal</string>
+    <string name="defametin">Defa</string>
+    <string name="hosgeldiniz">Eğlenerek Kodlama Öğrenmeye Hoşgeldiniz</string>
+    <string name="fonk_ad_giriniz">Lütfen Ad Giriniz</string>
+    <string name="bluetooth_desteklenmiyor">Cihazınızda Bluetooth Desteklenmemektedir.</string>
+    <string name="okuma_hatasi">Veri Okunurken Hata Oluştu.</string>
+    <string name="bluetooth_aciliyor">Bluetooth Açılıyor…</string>
+    <string name="robota_baglanmalisin">Önce Bir Robota Bağlanmalısınız!</string>
+    <string name="eslanmiş_robot_bulunamadi">Eşleşmiş Robot Bulunamadı!</string>
+    <string name="baglanti_hatasi">Beklenen Sürede Cevap Gelmedi</string>
+    <string name="see_you">Tekrar Görüşmek Üzere</string>
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="eger_degil">Eğer değil</string>
+</resources>

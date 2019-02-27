@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/sola"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSola"
+        app:layout_constraintLeft_toLeftOf="@+id/sola"
+        app:layout_constraintStart_toStartOf="@+id/sola" />
+
+
+    <ImageView
+        android:id="@+id/leftsign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/left"
+        app:layout_constraintBottom_toBottomOf="@+id/txtSola"
+        app:layout_constraintStart_toStartOf="@+id/sola" />
+    <TextView
+        android:id="@+id/txtSola"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="@string/sola"
+        android:fontFamily="@font/trkids"
+        android:textColor="@color/white"
+        android:layout_marginLeft="40dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sola"
+        app:layout_constraintEnd_toEndOf="@+id/sola"
+        app:layout_constraintStart_toStartOf="@+id/sola"
+        app:layout_constraintTop_toTopOf="@+id/sola" />
+</android.support.constraint.ConstraintLayout>

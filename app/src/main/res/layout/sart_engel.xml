@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/sart_engel"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="top"
+        android:gravity="top"
+        android:src="@drawable/sart2kopya" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="7dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/sart_engel"
+        app:layout_constraintLeft_toLeftOf="@+id/sart_engel"
+        app:layout_constraintStart_toStartOf="@+id/sart_engel" />
+
+    <TextView
+        android:id="@+id/txtSart1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/engel"
+        android:fontFamily="@font/trkids"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sart_engel"
+        app:layout_constraintStart_toStartOf="@+id/sart_engel"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toTopOf="@+id/sart_engel" />
+    <ImageView
+        android:id="@+id/sartEngelBoolean"
+        android:layout_width="16dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="93.5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tik"
+        app:layout_constraintBottom_toBottomOf="@+id/sart_engel"
+        app:layout_constraintLeft_toLeftOf="@+id/sart_engel"
+        app:layout_constraintStart_toStartOf="@+id/sart_engel" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,3772 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainbackground"
+    tools:context=".FullscreenActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:filterTouchesWhenObscured="true"
+            android:fitsSystemWindows="true" >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    android:layout_marginEnd="75dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="437dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="437dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="437dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:layout_editor_absoluteX="437dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="437dp" />
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        tools:layout_editor_absoluteX="437dp" />
+    <TextView
+        android:id="@+id/twBluetooth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton" />
+    <TextView
+        android:id="@+id/twBluetoothGelenVeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:layout_marginEnd="8dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twBluetooth" />
+
+</LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/translucent"
+            android:contentDescription="@string/zoomout"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:tint="#818181"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/trash"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/arrowdown" /><!--Neneleri Aşağı Kaydır Simge-->
+        <ImageButton
+            android:id="@+id/up"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/translucent"
+            android:contentDescription="@string/zoomin"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:tint="#818181"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/down"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/arrowup" /><!--Neneleri Yukarı Kaydır Simge-->
+        <ImageButton
+            android:id="@+id/reset"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/translucent"
+            android:contentDescription="@string/reset"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:tint="#818181"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/up"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/reset_view" /><!--Neneleri Default Konuma Getir Simge-->
+        <ImageButton
+            android:id="@+id/trash"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/translucent"
+            android:contentDescription="@string/delete"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="fitCenter"
+            android:tint="#818181"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/blockly_trash" /><!--Trash Simge-->
+        <ImageView
+            android:id="@+id/factory"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="@color/translucent"
+            android:src="@drawable/factory"
+            android:tint="#818181"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/floatingActionButton" /><!--Factory Simge-->
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/scrollHareket"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <ScrollView
+            android:id="@+id/pencereDegiskenOlustur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/translucent"
+            android:visibility="invisible"
+            android:filterTouchesWhenObscured="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="185dp"
+        android:layout_marginStart="8dp"
+        android:filterTouchesWhenObscured="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/layout_bg"
+        android:foregroundGravity="center_vertical"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+    >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+            <ImageView
+                android:id="@+id/yukaridegisken"
+                android:layout_marginStart="48.5dp"
+                android:background="@color/translucent"
+                android:layout_width="24dp"
+                android:layout_gravity="left"
+                android:tint="@color/matematik"
+                android:src="@drawable/arrowup"
+                android:layout_height="30dp"
+                />
+            <ImageView
+                android:id="@+id/degisken"
+                android:layout_marginStart="48.5dp"
+                android:background="@color/translucent"
+                android:layout_width="24dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/elma"
+                android:layout_height="40dp"
+                />
+            <ImageView
+                android:id="@+id/asagidegisken"
+                android:layout_marginStart="48.5dp"
+                android:background="@color/translucent"
+                android:layout_width="24dp"
+                android:layout_gravity="left"
+                android:tint="@color/matematik"
+                android:src="@drawable/arrowdown"
+                android:layout_height="30dp"
+                />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/equal"
+                android:layout_marginStart="40dp"
+                android:background="@color/translucent"
+                android:layout_width="24dp"
+                android:layout_gravity="center_vertical"
+                android:tint="@color/hareket"
+                android:src="@drawable/esit"
+                android:layout_height="40dp"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/yukaridegiskendeger"
+                    android:layout_marginStart="33dp"
+                    android:background="@color/translucent"
+                    android:layout_width="24dp"
+                    android:layout_gravity="left"
+                    android:tint="@color/matematik"
+                    android:src="@drawable/arrowup"
+                    android:layout_height="30dp"
+                    />
+            <TextView
+                android:id="@+id/tvDegisken"
+                android:background="@color/translucent"
+                android:layout_width="40dp"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="27sp"
+                android:layout_marginStart="25dp"
+                android:layout_height="40dp" />
+                <ImageView
+                    android:id="@+id/asagidegiskendeger"
+                    android:layout_marginStart="33dp"
+                    android:background="@color/translucent"
+                    android:layout_width="24dp"
+                    android:layout_gravity="left"
+                    android:tint="@color/matematik"
+                    android:src="@drawable/arrowdown"
+                    android:layout_height="30dp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/btDegTamam"
+                android:layout_marginStart="56dp"
+                android:background="@color/translucent"
+                android:layout_width="40dp"
+                android:src="@drawable/tik"
+                android:layout_height="40dp"
+                />
+            <ImageView
+                android:id="@+id/btDegIptal"
+                android:background="@color/translucent"
+                android:layout_width="40dp"
+                android:layout_marginStart="56dp"
+                android:src="@drawable/carpi"
+                android:layout_height="40dp"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+        </ScrollView><!--Pencere Yeni Değişken Değer Ata-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/translucent"
+            android:visibility="invisible"
+            android:id="@+id/pencereMatematikDegToDeg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+            <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/layout_bg"
+            android:foregroundGravity="center_vertical"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukari"
+                        android:layout_marginStart="18dp"
+                        android:tint="@color/matematik"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/anadegisken"
+                        android:layout_marginStart="18dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/elma"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagi"
+                        android:layout_marginStart="18dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/equalmat"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/translucent"
+                    android:layout_width="24dp"
+                    android:tint="@color/hareket"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/esit"
+                    android:layout_height="40dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukari2"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/matematik"
+                        android:layout_gravity="left"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/anadegisken2"
+                        android:layout_marginStart="26dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/elma"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagi2"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukari3"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/isaretmat"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/hareket"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arti"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagi3"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukari4"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/ikincidegisken"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/elma"
+                        android:layout_marginStart="25dp"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagi4"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btDegTamamMat"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/translucent"
+                    android:layout_width="40dp"
+                    android:src="@drawable/tik"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="40dp"
+                    />
+                <ImageView
+                    android:id="@+id/btDegIptalMat"
+                    android:background="@color/translucent"
+                    android:layout_width="40dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/carpi"
+                    android:layout_height="40dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView><!--Pencere Matematik Değişken Değişken-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereMatematikDegToSayi"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+            <LinearLayout
+
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/layout_bg"
+            android:foregroundGravity="center_vertical"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukaridegtosayi"
+                        android:layout_marginStart="18dp"
+                        android:tint="@color/matematik"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/anadegiskendegtosayi"
+                        android:layout_marginStart="18dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/elma"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagidegtosayi"
+                        android:layout_marginStart="18dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/equaldegtosayi"
+                    android:layout_marginStart="16dp"
+                    android:background="@color/translucent"
+                    android:layout_width="24dp"
+                    android:tint="@color/hareket"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/esit"
+                    android:layout_height="40dp"
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukaridegtosayi2"
+                        android:layout_marginStart="23dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/matematik"
+                        android:layout_gravity="left"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/anadegiskendegtosayi2"
+                        android:layout_marginStart="24dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:src="@drawable/elma"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagidegtosayi2"
+                        android:layout_marginStart="23dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukaridegtosayi3"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <ImageView
+                        android:id="@+id/isaretmatdegtosayi"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/hareket"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/arti"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagidegtosayi3"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/yukaridegtosayi4"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowup"
+                        android:layout_height="30dp"
+                        />
+                    <TextView
+                        android:id="@+id/ikincidegiskendegtosayi"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:gravity="center_horizontal"
+                        android:text="90"
+                        android:textSize="27sp"
+                        android:layout_marginStart="17dp"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/asagidegtosayi4"
+                        android:layout_marginStart="25dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:layout_gravity="left"
+                        android:tint="@color/matematik"
+                        android:src="@drawable/arrowdown"
+                        android:layout_height="30dp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btDegTamamMatdegtosayi"
+                    android:layout_marginStart="56dp"
+                    android:background="@color/translucent"
+                    android:layout_width="40dp"
+                    android:src="@drawable/tik"
+                    android:layout_marginBottom="10dp"
+                    android:layout_height="40dp"
+                    />
+                <ImageView
+                    android:id="@+id/btDegIptalMatdegtosayi"
+                    android:background="@color/translucent"
+                    android:layout_width="40dp"
+                    android:layout_marginStart="56dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/carpi"
+                    android:layout_height="40dp"
+
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </ScrollView><!--Pencere Matematik Değişken Sayı-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereMatematikSayiToSayi"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+
+            >
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:filterTouchesWhenObscured="true"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukarisayitosayi"
+                            android:layout_marginStart="18dp"
+                            android:tint="@color/matematik"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/anadegiskensayitosayi"
+                            android:layout_marginStart="18dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:src="@drawable/elma"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagisayitosayi"
+                            android:layout_marginStart="18dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/equalsayitosayi"
+                        android:layout_marginStart="20dp"
+                        android:background="@color/translucent"
+                        android:layout_width="24dp"
+                        android:tint="@color/hareket"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/esit"
+                        android:layout_height="40dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukarisayitosayi2"
+                            android:layout_marginStart="15dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:tint="@color/matematik"
+                            android:layout_gravity="left"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:id="@+id/ikincidegiskensayitosayi2"
+                            android:background="@color/translucent"
+                            android:layout_width="40dp"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textSize="27sp"
+                            android:layout_marginStart="7dp"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagisayitosayi2"
+                            android:layout_marginStart="15dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukarisayitosayi3"
+                            android:layout_marginStart="20dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/isaretmatsayitosayi"
+                            android:layout_marginStart="20dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:tint="@color/hareket"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/arti"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagisayitosayi3"
+                            android:layout_marginStart="20dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukarisayitosayi4"
+                            android:layout_marginStart="20dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:id="@+id/ikincidegiskensayitosayi"
+                            android:background="@color/translucent"
+                            android:layout_width="40dp"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textSize="27sp"
+                            android:layout_marginStart="12dp"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagisayitosayi4"
+                            android:layout_marginStart="20dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btDegTamamMatsayitosayi"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:src="@drawable/tik"
+                        android:layout_marginBottom="10dp"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/btDegIptalMatsayitosayi"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/carpi"
+                        android:layout_height="40dp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView><!--Pencere Matematik Sayı Sayı-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereKacDefa"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="155dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/yukariadet"
+                            android:tint="@color/matematik"
+                            android:layout_marginStart="2dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/tvAdet"
+                            android:layout_width="28dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/translucent"
+                            android:gravity="center_horizontal"
+                            android:maxLength="2"
+                            android:text="0"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:id="@+id/asagiadet"
+                            android:tint="@color/matematik"
+                            android:layout_marginStart="2dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:tint="@color/matematik"
+                            android:background="@color/translucent"
+                            android:layout_width="94dp"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:id="@+id/tvDefa"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/translucent"
+                            android:gravity="right"
+                            android:foregroundGravity="right"
+                            android:text="@string/defametin"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                        <ImageView
+                            android:tint="@color/matematik"
+                            android:background="@color/translucent"
+                            android:layout_width="94dp"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btAdetTamam"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:src="@drawable/tik"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/btAdetIptal"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:layout_marginStart="56dp"
+                        android:src="@drawable/carpi"
+                        android:layout_height="40dp"
+
+                        />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView><!--Pencere Kaç Defa-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereDegiskenSayiKarsilastir"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+            <LinearLayout
+
+                android:layout_width="250dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskensayi"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/degiskenkarsilastir"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/elma"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagidegiskensayi"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskensayiisaret"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/isaretDegiskenSayiKarsilastir"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/hareket"
+                            android:src="@drawable/buyuktur"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagidegiskensayiisaret"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskensayideger"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <TextView
+                            android:id="@+id/tvDegiskenSayi"
+                            android:background="@color/translucent"
+                            android:layout_width="40dp"
+                            android:gravity="center_horizontal"
+                            android:text="0"
+                            android:textSize="27sp"
+                            android:layout_marginStart="25dp"
+                            android:layout_height="40dp" />
+                        <ImageView
+                            android:id="@+id/asagidegiskensayideger"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btDegTamamDegiskenSayiKarsilastir"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:src="@drawable/tik"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/btDegIptalDegiskenSayiKarsilastir"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:layout_marginStart="56dp"
+                        android:src="@drawable/carpi"
+                        android:layout_height="40dp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView><!--Pencere Değişken Sayı Karşılaştır-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereDegiskenDegiskenKarsilastir"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+
+            <LinearLayout
+
+                android:layout_width="250dp"
+                android:layout_height="185dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskendegisken"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/degiskendegiskenkarsilastir"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/elma"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagidegiskendegisken"
+                            android:layout_marginStart="48.5dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskensdegiskenisaret"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/isaretDegiskenDegiskenKarsilastir"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:tint="@color/hareket"
+                            android:src="@drawable/buyuktur"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagidegiskendegiskenisaret"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:id="@+id/yukaridegiskendegisken2"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowup"
+                            android:layout_height="30dp"
+                            />
+                        <ImageView
+                            android:id="@+id/degiskendegiskenkarsilastir2"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:src="@drawable/elma"
+                            android:layout_height="40dp"
+                            />
+                        <ImageView
+                            android:id="@+id/asagidegiskendegisken2"
+                            android:layout_marginStart="33dp"
+                            android:background="@color/translucent"
+                            android:layout_width="24dp"
+                            android:layout_gravity="left"
+                            android:tint="@color/matematik"
+                            android:src="@drawable/arrowdown"
+                            android:layout_height="30dp"
+                            />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btDegTamamDegiskendDegiskenKarsilastir"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:src="@drawable/tik"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/btDegIptalDegiskenDegiskenKarsilastir"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:layout_marginStart="56dp"
+                        android:src="@drawable/carpi"
+                        android:layout_height="40dp"
+
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView><!--Pencere Değişken Değişken Karşılaştır-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereFonksiyonOlustur"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="140dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+
+                <TextView
+                    android:id="@+id/tvFonksiyon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/translucent"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/trkids"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:text="@string/fonksiyon_ad_giriniz"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/etFonksiyon"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="2dp"
+                    android:fontFamily="@font/trkids"
+                    android:background="@color/white"
+                    android:hint="@string/en_fazla_15_karakter"
+                    android:maxLength="15"
+                    android:padding="0dp"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="16sp" />
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btFonkTamam"
+                        android:layout_marginStart="56dp"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:src="@drawable/tik"
+                        android:layout_height="40dp"
+                        />
+                    <ImageView
+                        android:id="@+id/btFonkIptal"
+                        android:background="@color/translucent"
+                        android:layout_width="40dp"
+                        android:layout_marginStart="56dp"
+                        android:src="@drawable/carpi"
+                        android:layout_height="40dp"
+
+                        />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </ScrollView><!--Pencere Fonksiyon Oluştur-->
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pencereBtBaglanti"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:filterTouchesWhenObscured="true"
+            >
+
+            <LinearLayout
+
+                android:layout_width="250dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/layout_bg"
+                android:foregroundGravity="center_vertical"
+                android:orientation="vertical"
+                android:scrollbars="vertical"
+>
+
+                <TextView
+                    android:id="@+id/Secim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/translucent"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="5dp"
+                    android:fontFamily="@font/trkids"
+                    android:text="@string/btChoice"
+                    android:textColor="@color/black_overlay"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ListView
+                    android:id="@+id/btListView"
+                    android:layout_width="240dp"
+                    android:layout_height="145dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="20dp"
+                    android:textColor="@color/black_overlay" />
+
+                <ListView
+                    android:id="@+id/btListView2"
+                    android:layout_width="240dp"
+                    android:layout_height="match_parent" />
+
+
+                <TextView
+                    android:id="@+id/Durum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/translucent"
+                    android:textColor="@color/black_overlay"
+                    android:gravity="center_horizontal"
+                    android:text="@string/noPairedDevices"
+                    android:textSize="15sp"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@id/pencereBtBaglanti" />
+
+            </LinearLayout>
+        </ScrollView><!--Pencere Bluetooth-->
+        <ImageView
+            android:id="@+id/btnHareket"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/hareket"
+            app:layout_constraintTop_toTopOf="parent" /><!--Hareket Buton-->
+        <TextView
+            android:id="@+id/txtHareket"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            android:fontFamily="@font/trkids"
+
+            android:text="@string/hareket"
+            android:textColor="@color/hareket"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnHareket"
+            app:layout_constraintTop_toTopOf="@id/btnHareket" /><!--Hareket Text-->
+        <ImageView
+            android:id="@+id/imgHareket"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/translucent"
+            android:src="@drawable/run"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnHareket"
+            app:layout_constraintTop_toTopOf="@id/btnHareket" /><!--Hareket Simge-->
+        <ImageView
+            android:id="@+id/btnKarar"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/karar"
+            app:layout_constraintTop_toBottomOf="@id/btnHareket" /><!--Karar Buton-->
+        <TextView
+            android:id="@+id/txtKarar"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            android:fontFamily="@font/trkids"
+
+            android:text="@string/karar"
+            android:textColor="@color/karar"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnKarar"
+            app:layout_constraintTop_toTopOf="@id/btnKarar" /><!--Karar Text-->
+        <ImageView
+            android:id="@+id/imgKarar"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/translucent"
+            android:paddingEnd="2dp"
+            android:src="@drawable/decision"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnKarar"
+            app:layout_constraintTop_toTopOf="@id/btnKarar" /><!--Karar Simge-->
+        <ImageView
+            android:id="@+id/btnMatematik"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/matematik"
+            app:layout_constraintTop_toBottomOf="@id/btnKarar" /><!--İşlem Buton-->
+        <TextView
+            android:id="@+id/txtMatematik"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            android:fontFamily="@font/trkids"
+            android:text="@string/matematik"
+            android:textColor="@color/matematik"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnMatematik"
+            app:layout_constraintTop_toTopOf="@id/btnMatematik" /><!--İşlem Text-->
+        <ImageView
+            android:id="@+id/imgMath"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/translucent"
+            android:paddingEnd="2dp"
+            android:src="@drawable/math"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnMatematik"
+            app:layout_constraintTop_toTopOf="@id/btnMatematik" /><!--İşlem Simge-->
+        <ImageView
+            android:id="@+id/btnDongu"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/dongu"
+            app:layout_constraintTop_toBottomOf="@id/btnMatematik" /><!--Döngü Buton-->
+        <TextView
+            android:id="@+id/txtDongu"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/trkids"
+            android:paddingStart="9dp"
+            android:text="@string/dongu"
+            android:textColor="@color/dongu"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnDongu"
+            app:layout_constraintTop_toTopOf="@id/btnDongu" /><!--Döngü Text-->
+        <ImageView
+            android:id="@+id/imgDongu"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/translucent"
+            android:paddingEnd="3dp"
+            android:src="@drawable/loop"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnDongu"
+            app:layout_constraintTop_toTopOf="@id/btnDongu" /><!--Döngü Simge-->
+        <ImageView
+            android:id="@+id/btnFonksiyon"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/fonksiyon"
+            app:layout_constraintTop_toBottomOf="@id/btnDongu"
+
+            /><!--Fonksiyon Buton-->
+        <TextView
+            android:id="@+id/txtFonksiyon"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:background="@color/white"
+            android:fontFamily="@font/trkids"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            android:text="@string/fonksiyon"
+            android:textColor="@color/fonksiyon"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnFonksiyon"
+            app:layout_constraintTop_toTopOf="@id/btnFonksiyon" /><!--Fonksiyon Text-->
+        <ImageView
+            android:id="@+id/imgFonksiyon"
+            android:layout_width="30dp"
+            android:layout_height="28dp"
+            android:background="@color/translucent"
+            android:paddingEnd="-4dp"
+            android:src="@drawable/function"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnFonksiyon"
+            app:layout_constraintTop_toTopOf="@id/btnFonksiyon" /><!--Fonksiyon Simge-->
+        <ImageView
+            android:id="@+id/btnDegisken"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:background="@color/degisken"
+            app:layout_constraintTop_toBottomOf="@id/btnFonksiyon"
+
+            /><!--Değişken Buton-->
+        <TextView
+            android:id="@+id/txtDegisken"
+            android:layout_width="95dp"
+            android:layout_height="30dp"
+            android:fontFamily="@font/trkids"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingStart="9dp"
+            android:text="@string/degisken"
+            android:textColor="@color/degisken"
+            android:textSize="6pt"
+            app:layout_constraintRight_toRightOf="@id/btnDegisken"
+            app:layout_constraintTop_toTopOf="@id/btnDegisken" /><!--Değişken Text-->
+        <ImageView
+            android:id="@+id/imgDegisken"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/translucent"
+            android:paddingEnd="3dp"
+            android:src="@drawable/fruits"
+            android:tint="@color/icon"
+            app:layout_constraintRight_toRightOf="@id/btnDegisken"
+            app:layout_constraintTop_toTopOf="@id/btnDegisken" /><!--Değişken Simge-->
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/blueplaybutton"
+            app:layout_constrainedHeight="false"
+            app:layout_constraintEnd_toStartOf="@+id/scrollDegisken"
+            app:layout_constraintStart_toStartOf="@+id/divider2"
+            app:layout_constraintTop_toBottomOf="@+id/txtDegisken" /><!--Play Button-->
+        <ImageView
+            android:id="@+id/audio"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="37.5dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/sound"
+            android:backgroundTint="@color/background"
+            android:scaleType="fitCenter"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/play" /><!--Audio-->
+        <ScrollView
+            android:id="@+id/scrollHareket"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:filterTouchesWhenObscured="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2"
+
+            >
+
+            <android.support.constraint.ConstraintLayout
+                android:filterTouchesWhenObscured="true"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/ileritek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket" />
+
+                <ImageView
+                    android:id="@+id/isik1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtIleri"
+                    app:layout_constraintLeft_toLeftOf="@+id/ileritek"
+                    app:layout_constraintStart_toStartOf="@+id/ileritek" />
+
+                <ImageView
+                    android:id="@+id/forwardsign"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/forward"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtIleri"
+                    app:layout_constraintStart_toStartOf="@+id/ileritek" />
+
+                <TextView
+                    android:id="@+id/txtIleri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/ileri"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/trkids"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ileritek"
+                    app:layout_constraintEnd_toEndOf="@+id/ileritek"
+                    app:layout_constraintStart_toStartOf="@+id/ileritek"
+                    app:layout_constraintTop_toTopOf="@+id/ileritek" />
+
+
+                <ImageView
+                    android:id="@+id/geritek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket"
+                    app:layout_constraintTop_toBottomOf="@id/ileritek" />
+
+                <ImageView
+                    android:id="@+id/isik2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtGeri"
+                    app:layout_constraintLeft_toLeftOf="@+id/geritek"
+                    app:layout_constraintStart_toStartOf="@+id/geritek" />
+
+                <ImageView
+                    android:id="@+id/backwardsign"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/back"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtGeri"
+                    app:layout_constraintStart_toStartOf="@+id/geritek" />
+
+                <TextView
+                    android:id="@+id/txtGeri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/trkids"
+                    android:text="@string/geri"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/geritek"
+                    app:layout_constraintEnd_toEndOf="@+id/geritek"
+                    app:layout_constraintStart_toStartOf="@+id/geritek"
+                    app:layout_constraintTop_toTopOf="@+id/geritek" />
+
+
+                <ImageView
+                    android:id="@+id/sagatek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket"
+                    app:layout_constraintTop_toBottomOf="@id/geritek" />
+
+                <ImageView
+                    android:id="@+id/isik3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtSaga"
+                    app:layout_constraintLeft_toLeftOf="@+id/sagatek"
+                    app:layout_constraintStart_toStartOf="@+id/sagatek" />
+
+                <ImageView
+                    android:id="@+id/rightsign"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/right"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtSaga"
+                    app:layout_constraintStart_toStartOf="@+id/sagatek" />
+
+                <TextView
+                    android:id="@+id/txtSaga"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/trkids"
+                    android:text="@string/saga"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sagatek"
+                    app:layout_constraintEnd_toEndOf="@+id/sagatek"
+                    app:layout_constraintStart_toStartOf="@+id/sagatek"
+                    app:layout_constraintTop_toTopOf="@+id/sagatek" />
+
+
+                <ImageView
+                    android:id="@+id/solatek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket"
+                    app:layout_constraintTop_toBottomOf="@id/sagatek" />
+
+                <ImageView
+                    android:id="@+id/isik4"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtSola"
+                    app:layout_constraintLeft_toLeftOf="@+id/solatek"
+                    app:layout_constraintStart_toStartOf="@+id/solatek" />
+
+
+                <ImageView
+                    android:id="@+id/leftsign"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginLeft="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/left"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtSola"
+                    app:layout_constraintStart_toStartOf="@+id/solatek" />
+
+                <TextView
+                    android:id="@+id/txtSola"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/trkids"
+                    android:text="@string/sola"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/solatek"
+                    app:layout_constraintEnd_toEndOf="@+id/solatek"
+                    app:layout_constraintStart_toStartOf="@+id/solatek"
+                    app:layout_constraintTop_toTopOf="@+id/solatek" />
+
+
+                <ImageView
+                    android:id="@+id/renkDegisTek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket"
+                    app:layout_constraintTop_toBottomOf="@id/solatek" />
+                <ImageView
+                    android:id="@+id/isikRenk"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:layout_marginTop="20dp"
+
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtRenk"
+                    app:layout_constraintLeft_toLeftOf="@+id/renkDegisTek"
+                    app:layout_constraintStart_toStartOf="@+id/renkDegisTek" />
+
+                <TextView
+                    android:id="@+id/txtRenk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/renk"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/trkids"
+                    android:layout_marginStart="0dp"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="5dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/renkDegisTek"
+                    app:layout_constraintEnd_toEndOf="@+id/renkDegisTek"
+                    app:layout_constraintStart_toStartOf="@+id/renkDegisTek"
+                    app:layout_constraintTop_toTopOf="@+id/renkDegisTek" />
+                <ImageView
+                    android:id="@+id/renkDegisKareCerceve"
+                    android:layout_width="30dp"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="90dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/black"
+                    android:layout_marginBottom="7dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/renkDegisTek"
+                    app:layout_constraintStart_toStartOf="@+id/renkDegisTek" />
+                <ImageView
+                    android:id="@+id/renkDegisKare"
+                    android:layout_width="28dp"
+                    android:layout_height="19dp"
+                    android:layout_marginStart="91dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/dongu"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/renkDegisTek"
+                    app:layout_constraintStart_toStartOf="@+id/renkDegisTek" />
+
+                <ImageView
+                    android:id="@+id/durtek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/hareket"
+                    app:layout_constraintTop_toBottomOf="@id/renkDegisTek" />
+
+                <ImageView
+                    android:id="@+id/isik5"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtStop"
+                    app:layout_constraintLeft_toLeftOf="@+id/durtek"
+                    app:layout_constraintStart_toStartOf="@+id/durtek" />
+
+                <TextView
+                    android:id="@+id/txtStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center_horizontal"
+                    android:fontFamily="@font/trkids"
+                    android:layout_marginStart="40dp"
+                    android:text="@string/stop"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/durtek"
+                    app:layout_constraintStart_toStartOf="@+id/durtek"
+                    app:layout_constraintTop_toTopOf="@+id/durtek" />
+
+                <ImageView
+                    android:id="@+id/stopsign"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginStart="23dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/stopsign"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtStop"
+                    app:layout_constraintStart_toStartOf="@+id/durtek" />
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView><!--Eylem-->
+        <ScrollView
+            android:id="@+id/scrollKarar"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:filterTouchesWhenObscured="true"
+            android:alpha="1"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/egertek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/kosulust" />
+
+                <ImageView
+                    android:id="@+id/egerYan"
+                    android:layout_width="21dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/kosulyan"
+                    app:layout_constraintBottom_toTopOf="@id/egerAlt"
+                    app:layout_constraintLeft_toLeftOf="@+id/egertek"
+                    app:layout_constraintStart_toStartOf="@+id/egertek"
+                    app:layout_constraintTop_toBottomOf="@+id/egertek" />
+
+                <ImageView
+                    android:id="@+id/egerAlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/kosulalt"
+                    app:layout_constraintLeft_toLeftOf="@+id/egerYan"
+                    app:layout_constraintStart_toStartOf="@+id/egerYan"
+                    app:layout_constraintTop_toBottomOf="@+id/egerYan" />
+
+                <ImageView
+                    android:id="@+id/isik"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtEger"
+                    app:layout_constraintLeft_toLeftOf="@+id/egertek"
+                    app:layout_constraintStart_toStartOf="@+id/egertek" />
+
+                <TextView
+                    android:id="@+id/txtEger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/eger"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/egertek"
+                    app:layout_constraintEnd_toEndOf="@+id/egertek"
+                    app:layout_constraintStart_toStartOf="@+id/egertek"
+                    app:layout_constraintTop_toTopOf="@+id/egertek" />
+
+                <ImageView
+                    android:id="@+id/egerSign"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="60dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/eger"
+                    android:visibility="invisible"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtEger"
+                    app:layout_constraintEnd_toEndOf="@+id/egertek"
+                    app:layout_constraintRight_toRightOf="@+id/egertek"
+                    app:layout_constraintStart_toStartOf="@+id/egertek" />
+                <ImageView
+                    android:id="@+id/sart1tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="45dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sart2kopya"
+                    app:layout_constraintTop_toBottomOf="@id/egertek" />
+
+                <ImageView
+                    android:id="@+id/isiksart"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart1tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart1tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart1tek" />
+
+                <ImageView
+                    android:id="@+id/kareRenkSart"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/dongu"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart1tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart1tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart1tek" />
+
+
+                <TextView
+                    android:id="@+id/txtSart1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/karede"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart1tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart1tek"
+                    app:layout_constraintTop_toTopOf="@+id/sart1tek" />
+                <ImageView
+                    android:id="@+id/sart1tekBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart1tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart1tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart1tek" />
+
+                <ImageView
+                    android:id="@+id/sart2tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="13dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sart2kopya"
+                    app:layout_constraintTop_toBottomOf="@id/sart1tek" />
+
+                <ImageView
+                    android:id="@+id/isiksart2"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart2tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart2tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart2tek" />
+
+                <ImageView
+                    android:id="@+id/kareRenkSartMavi"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart2tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart2tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart2tek" />
+
+
+                <TextView
+                    android:id="@+id/txtSart2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/karede"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart2tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart2tek"
+                    app:layout_constraintTop_toTopOf="@+id/sart2tek" />
+                <ImageView
+                    android:id="@+id/sart2tekBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart2tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart2tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart2tek" />
+                <ImageView
+                    android:id="@+id/sart3tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="13dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/sart2kopya"
+                    app:layout_constraintTop_toBottomOf="@id/sart2tek" />
+
+                <ImageView
+                    android:id="@+id/isiksart3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart3tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart3tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart3tek" />
+
+                <ImageView
+                    android:id="@+id/kareRenkSartKirmizi"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/hareket"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart3tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart3tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart3tek" />
+
+
+                <TextView
+                    android:id="@+id/txtSart3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="42dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/karede"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart3tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart3tek"
+                    app:layout_constraintTop_toTopOf="@+id/sart3tek" />
+                <ImageView
+                    android:id="@+id/sart3tekBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart3tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart3tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart3tek" />
+
+                <ImageView
+                    android:id="@+id/sart_engel_tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:src="@drawable/sart2kopya"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintTop_toBottomOf="@id/sart3tek"/>
+                <ImageView
+                    android:id="@+id/isiksartengel"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_engel_tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart_engel_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_engel_tek" />
+                <TextView
+                    android:id="@+id/txtSartEngel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/engel"
+                    android:fontFamily="@font/trkids"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_engel_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_engel_tek"
+                    android:layout_marginStart="25dp"
+                    app:layout_constraintTop_toTopOf="@+id/sart_engel_tek" />
+                <ImageView
+                    android:id="@+id/sartEngelBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_engel_tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart_engel_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_engel_tek" />
+
+                <ImageView
+                    android:id="@+id/sart_cizgi_tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    app:layout_constraintTop_toBottomOf="@id/sart_engel_tek"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/sart2kopya"
+                    />
+                <ImageView
+                    android:id="@+id/isiksartcizgi"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_cizgi_tek" />
+                <TextView
+                    android:id="@+id/txtSartCizgi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cizgi"
+                    android:fontFamily="@font/trkids"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_cizgi_tek"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintTop_toTopOf="@+id/sart_cizgi_tek" />
+                <ImageView
+                    android:id="@+id/kareCizgi"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="68dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/cizgion"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_cizgi_tek" />
+                <ImageView
+                    android:id="@+id/sartCizgiBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/sart_cizgi_tek"
+                    app:layout_constraintStart_toStartOf="@+id/sart_cizgi_tek" />
+
+
+
+
+
+
+
+
+                <ImageView
+                    android:id="@+id/sartdegtosayi1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:src="@drawable/sart1kopya"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintTop_toBottomOf="@id/sart_cizgi_tek"/>
+                <ImageView
+                    android:id="@+id/isiksartdegtosayi1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+                    app:layout_constraintLeft_toLeftOf="@+id/sartdegtosayi1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+                <ImageView
+                    android:id="@+id/sartdegtosayi1deg1"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/elma"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+                <ImageView
+                    android:id="@+id/signdegtosayisart"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="51dp"
+                    android:layout_marginBottom="5dp"
+                    android:tint="@color/white"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/buyukesit"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+                <TextView
+                    android:id="@+id/degTextIslemToSayi"
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="4dp"
+                    android:paddingTop="3dp"
+                    android:fontFamily="@font/trkids"
+                    android:background="@color/translucent"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1"/>
+                <ImageView
+                    android:id="@+id/sartdegtosayitekBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+                    app:layout_constraintLeft_toLeftOf="@+id/sartdegtosayi1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+
+                <ImageView
+                    android:id="@+id/sartdegtodeg1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="top"
+                    android:gravity="top"
+                    android:src="@drawable/sart1kopya"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintTop_toBottomOf="@id/sartdegtosayi1"/>
+                <ImageView
+                    android:id="@+id/isiksartdegtodeg1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtodeg1"
+                    app:layout_constraintLeft_toLeftOf="@+id/sartdegtodeg1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtodeg1" />
+                <ImageView
+                    android:id="@+id/deg1"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/elma"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtodeg1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtodeg1" />
+                <ImageView
+                    android:id="@+id/signdegtodeg"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="51dp"
+                    android:layout_marginBottom="5dp"
+                    android:tint="@color/white"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esitdegil"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtodeg1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtodeg1" />
+
+                <ImageView
+                    android:id="@+id/deg2"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/armut"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtodeg1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtodeg1" />
+                <ImageView
+                    android:id="@+id/sartdegtodegtekBoolean"
+                    android:layout_width="16dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="93.5dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/tik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sartdegtodeg1"
+                    app:layout_constraintLeft_toLeftOf="@+id/sartdegtodeg1"
+                    app:layout_constraintStart_toStartOf="@+id/sartdegtodeg1" />
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView><!--Karar-->
+        <ScrollView
+            android:id="@+id/scrollMatematik"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:filterTouchesWhenObscured="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2">
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+                <ImageView
+                    android:id="@+id/deg"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/matematik" />
+                <ImageView
+                    android:id="@+id/isikdeg"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="1.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/deg3sign"
+                    app:layout_constraintLeft_toLeftOf="@+id/deg"
+                    app:layout_constraintStart_toStartOf="@+id/deg" />
+                <ImageView
+                    android:id="@+id/degsign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/elma"
+                    app:layout_constraintTop_toTopOf="@+id/deg3sign"
+                    app:layout_constraintStart_toStartOf="@+id/deg" />
+                <ImageView
+                    android:id="@+id/esitdegsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginBottom="0.5dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/deg3sign"
+                    app:layout_constraintStart_toStartOf="@+id/deg" />
+                <ImageView
+                    android:id="@+id/deg2sign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="71dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/armut"
+                    app:layout_constraintBottom_toBottomOf="@+id/deg3sign"
+                    app:layout_constraintStart_toStartOf="@+id/deg" />
+                <ImageView
+                    android:id="@+id/isaretdeg"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginBottom="1dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/arti"
+                    app:layout_constraintBottom_toBottomOf="@+id/deg3sign"
+                    app:layout_constraintStart_toStartOf="@+id/deg" />
+                <ImageView
+                    android:id="@+id/deg3sign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="109dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/portakal"
+                    app:layout_constraintBottom_toBottomOf="@+id/deg"
+                    app:layout_constraintStart_toStartOf="@+id/deg"
+                    app:layout_constraintTop_toTopOf="@+id/deg" />
+
+                <ImageView
+                    android:id="@+id/degtosayi"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/matematik"
+                    app:layout_constraintTop_toBottomOf="@id/deg"
+                    android:layout_marginTop="20dp"
+                    />
+                <ImageView
+                    android:id="@+id/isikdegtosayi"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayiText"
+                    app:layout_constraintLeft_toLeftOf="@+id/degtosayi"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi" />
+                <ImageView
+                    android:id="@+id/degtosayisign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/elma"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayiText"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi" />
+                <ImageView
+                    android:id="@+id/degtosayiesitsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginBottom="2dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayiText"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi" />
+                <ImageView
+                    android:id="@+id/elma2sign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/seftali"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayiText"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi" />
+                <ImageView
+                    android:id="@+id/isaret"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginBottom="2dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/arti"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayiText"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi" />
+                <TextView
+                    android:id="@+id/degtosayiText"
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="106dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingTop="3dp"
+                    android:background="@color/translucent"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/trkids"
+                    android:gravity="center_horizontal"
+                    android:text="0"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/degtosayi"
+                    app:layout_constraintStart_toStartOf="@+id/degtosayi"
+                    app:layout_constraintTop_toTopOf="@+id/degtosayi"
+                    />
+                <ImageView
+                    android:id="@+id/sayi_to_sayi"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintTop_toBottomOf="@id/degtosayi"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/translucent"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/matematik" />
+                <ImageView
+                    android:id="@+id/isiksayitosayi"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayitosayi"
+                    app:layout_constraintLeft_toLeftOf="@+id/sayi_to_sayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi" />
+                <ImageView
+                    android:id="@+id/sayitosayisign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/muz"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayitosayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi" />
+                <ImageView
+                    android:id="@+id/sayitosayiesitsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="53dp"
+                    android:layout_marginBottom="2dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayitosayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi" />
+                <TextView
+                    android:id="@+id/sayitosayiText2"
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="71dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingTop="3dp"
+                    android:background="@color/translucent"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/trkids"
+                    android:text="0"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayi_to_sayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi"
+                    />
+                <ImageView
+                    android:id="@+id/sayitosayiisaret"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginBottom="2dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/arti"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayitosayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi" />
+                <TextView
+                    android:id="@+id/sayitosayi"
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="106dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/translucent"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="3dp"
+                    android:textColor="@color/white"
+                    android:text="0"
+                    android:fontFamily="@font/trkids"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/sayi_to_sayi"
+                    app:layout_constraintStart_toStartOf="@+id/sayi_to_sayi"
+                    app:layout_constraintTop_toTopOf="@+id/sayi_to_sayi"
+                    />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </ScrollView><!--Matematik-->
+        <ScrollView
+            android:id="@+id/scrollDongu"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:filterTouchesWhenObscured="true"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:alpha="1"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/tekrarlatek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:contentDescription="@string/eger"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/kosulust3" />
+
+                <ImageView
+                    android:id="@+id/tekrarlaYan"
+                    android:layout_width="21dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:contentDescription="@string/eger"
+                    android:foregroundGravity="left"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/kosulyan3"
+                    app:layout_constraintBottom_toTopOf="@id/tekrarlaAlt"
+                    app:layout_constraintLeft_toLeftOf="@+id/tekrarlatek"
+                    app:layout_constraintTop_toBottomOf="@+id/tekrarlatek" />
+
+                <ImageView
+                    android:id="@+id/tekrarlaAlt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:contentDescription="@string/eger"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/kosulalt3"
+                    app:layout_constraintLeft_toLeftOf="@+id/tekrarlaYan"
+                    app:layout_constraintTop_toBottomOf="@+id/tekrarlaYan" />
+
+                <ImageView
+                    android:id="@+id/isikTekrar"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:contentDescription="@string/eger"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtTekrarla"
+                    app:layout_constraintLeft_toLeftOf="@+id/tekrarlatek"
+                    app:layout_constraintStart_toStartOf="@+id/tekrarlatek" />
+
+                <TextView
+                    android:id="@+id/txtTekrarla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/tekrarla"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@id/tekrarlatek"
+                    app:layout_constraintBottom_toBottomOf="@id/tekrarlatek"
+                    app:layout_constraintStart_toStartOf="@id/tekrarlatek"
+                    app:layout_constraintTop_toTopOf="@id/tekrarlatek"/>
+
+                <ImageView
+                    android:id="@+id/tekrarlaSign"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="66dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:contentDescription="@string/eger"
+                    android:src="@drawable/tekrarla"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/tekrarlatek"
+                    app:layout_constraintEnd_toEndOf="@id/tekrarlatek"
+                    app:layout_constraintRight_toRightOf="@id/tekrarlatek"
+                    app:layout_constraintStart_toStartOf="@id/tekrarlatek" />
+
+                <ImageView
+                    android:id="@+id/adet1tek"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="55dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintTop_toBottomOf="@id/tekrarlatek" />
+
+                <ImageView
+                    android:id="@+id/isikadet"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adet1tek"
+                    app:layout_constraintLeft_toLeftOf="@+id/adet1tek"
+                    app:layout_constraintStart_toStartOf="@+id/adet1tek" />
+
+                <TextView
+                    android:id="@+id/txtAdet1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adet1tek"
+                    app:layout_constraintStart_toStartOf="@+id/adet1tek"
+                    app:layout_constraintTop_toTopOf="@+id/adet1tek" />
+
+                <TextView
+                    android:id="@+id/editText"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/translucent"
+                    android:backgroundTint="@color/translucent"
+                    android:clickable="false"
+                    android:maxLength="2"
+                    android:maxLines="2"
+                    android:padding="0dp"
+                    android:shadowColor="@color/white"
+                    android:fontFamily="@font/trkids"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adet1tek"
+                    app:layout_constraintStart_toStartOf="@+id/adet1tek"
+                    app:layout_constraintTop_toTopOf="@+id/adet1tek" />
+                <ImageView
+                    android:id="@+id/adetElma1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    app:layout_constraintTop_toBottomOf="@id/adet1tek"
+                    android:layout_marginTop="17dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:id="@+id/isikAdetElma1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+                    app:layout_constraintLeft_toLeftOf="@+id/adetElma1"
+                    app:layout_constraintStart_toStartOf="@+id/adetElma1" />
+                <ImageView
+                    android:id="@+id/elmaadet"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/elma"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+                    app:layout_constraintStart_toStartOf="@+id/adetElma1"
+                    app:layout_constraintTop_toTopOf="@+id/adetElma1" />
+
+                <TextView
+                    android:id="@+id/txtAdetElma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+                    app:layout_constraintStart_toStartOf="@+id/adetElma1"
+                    app:layout_constraintTop_toTopOf="@+id/adetElma1" />
+                <ImageView
+                    android:id="@+id/adetArmut1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    app:layout_constraintTop_toBottomOf="@id/adetElma1"
+                    android:layout_marginTop="17dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:id="@+id/isikAdetArmut1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetArmut1"
+                    app:layout_constraintLeft_toLeftOf="@+id/adetArmut1"
+                    app:layout_constraintStart_toStartOf="@+id/adetArmut1" />
+                <ImageView
+                    android:id="@+id/armutadet"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/armut"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetArmut1"
+                    app:layout_constraintStart_toStartOf="@+id/adetArmut1"
+                    app:layout_constraintTop_toTopOf="@+id/adetArmut1" />
+
+                <TextView
+                    android:id="@+id/txtAdetArmut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetArmut1"
+                    app:layout_constraintStart_toStartOf="@+id/adetArmut1"
+                    app:layout_constraintTop_toTopOf="@+id/adetArmut1" />
+                <ImageView
+                    android:id="@+id/adetPortakal1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    app:layout_constraintTop_toBottomOf="@id/adetArmut1"
+                    android:layout_marginTop="17dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:id="@+id/isikAdetPortakal1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetPortakal1"
+                    app:layout_constraintLeft_toLeftOf="@+id/adetPortakal1"
+                    app:layout_constraintStart_toStartOf="@+id/adetPortakal1" />
+                <ImageView
+                    android:id="@+id/portakaladet"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/portakal"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetPortakal1"
+                    app:layout_constraintStart_toStartOf="@+id/adetPortakal1"
+                    app:layout_constraintTop_toTopOf="@+id/adetPortakal1" />
+
+                <TextView
+                    android:id="@+id/txtAdetPortakal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetPortakal1"
+                    app:layout_constraintStart_toStartOf="@+id/adetPortakal1"
+                    app:layout_constraintTop_toTopOf="@+id/adetPortakal1" />
+                <ImageView
+                    android:id="@+id/adetSeftali1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    app:layout_constraintTop_toBottomOf="@id/adetPortakal1"
+                    android:layout_marginTop="17dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:id="@+id/isikAdetSeftali1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetSeftali1"
+                    app:layout_constraintLeft_toLeftOf="@+id/adetSeftali1"
+                    app:layout_constraintStart_toStartOf="@+id/adetSeftali1" />
+                <ImageView
+                    android:id="@+id/seftaliadet"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/seftali"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetSeftali1"
+                    app:layout_constraintStart_toStartOf="@+id/adetSeftali1"
+                    app:layout_constraintTop_toTopOf="@+id/adetSeftali1" />
+
+                <TextView
+                    android:id="@+id/txtAdetSeftali"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetSeftali1"
+                    app:layout_constraintStart_toStartOf="@+id/adetSeftali1"
+                    app:layout_constraintTop_toTopOf="@+id/adetSeftali1" />
+                <ImageView
+                    android:id="@+id/adetMuz1"
+                    android:layout_width="110dp"
+                    android:layout_height="25dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    app:layout_constraintTop_toBottomOf="@id/adetSeftali1"
+                    android:layout_marginTop="17dp"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/adet"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:id="@+id/isikAdetMuz1"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="7dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetMuz1"
+                    app:layout_constraintLeft_toLeftOf="@+id/adetMuz1"
+                    app:layout_constraintStart_toStartOf="@+id/adetMuz1" />
+                <ImageView
+                    android:id="@+id/muzadet"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginBottom="3dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/muz"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetMuz1"
+                    app:layout_constraintStart_toStartOf="@+id/adetMuz1"
+                    app:layout_constraintTop_toTopOf="@+id/adetMuz1" />
+
+                <TextView
+                    android:id="@+id/txtAdetMuz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginBottom="1dp"
+                    android:text="@string/defa"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/adetMuz1"
+                    app:layout_constraintStart_toStartOf="@+id/adetMuz1"
+                    app:layout_constraintTop_toTopOf="@+id/adetMuz1" />
+
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView><!--Döngü-->
+        <ScrollView
+            android:id="@+id/scrollFonksiyon"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:filterTouchesWhenObscured="true"
+            android:fillViewport="true"
+            android:scrollbars = "vertical"
+            android:scrollbarStyle="insideInset"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2">
+    <LinearLayout
+        android:id="@+id/fonksiyonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+        </ScrollView><!--Fonksiyon-->
+        <ScrollView
+            android:id="@+id/scrollDegisken"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:alpha="1"
+            android:background="@color/white"
+            android:filterTouchesWhenObscured="true"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            app:layout_constraintTop_toTopOf="@id/divider2" >
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp">
+
+
+            <ImageView
+                android:id="@+id/elmaTek"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:adjustViewBounds="true"
+                android:background="@color/translucent"
+                android:foregroundGravity="left"
+                android:gravity="center_vertical"
+                android:src="@drawable/degisken" />
+            <ImageView
+                android:id="@+id/isikelma"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginBottom="2.5dp"
+                android:adjustViewBounds="true"
+                android:background="@color/translucent"
+                android:src="@drawable/kirmiziisik"
+                app:layout_constraintBottom_toBottomOf="@+id/elmaText"
+                app:layout_constraintLeft_toLeftOf="@+id/elmaTek"
+                app:layout_constraintStart_toStartOf="@+id/elmaTek" />
+            <ImageView
+                android:id="@+id/elmasign"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="1dp"
+                android:adjustViewBounds="true"
+                android:background="@color/translucent"
+                android:src="@drawable/elma"
+                app:layout_constraintBottom_toBottomOf="@+id/elmaText"
+                app:layout_constraintStart_toStartOf="@+id/elmaTek" />
+            <ImageView
+                android:id="@+id/esitsign"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:tint="@color/hareket"
+                android:layout_marginStart="63dp"
+                android:layout_marginBottom="2dp"
+                android:adjustViewBounds="true"
+                android:background="@color/translucent"
+                android:src="@drawable/esit"
+                app:layout_constraintBottom_toBottomOf="@+id/elmaText"
+                app:layout_constraintStart_toStartOf="@+id/elmaTek" />
+            <TextView
+                android:id="@+id/elmaText"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/translucent"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/trkids"
+                android:textSize="17sp"
+                android:text="0"
+                app:layout_constraintBottom_toBottomOf="@+id/elmaTek"
+                app:layout_constraintStart_toStartOf="@+id/elmaTek"
+                app:layout_constraintTop_toTopOf="@+id/elmaTek"
+                />
+
+                <ImageView
+                    android:id="@+id/armutTek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/degisken"
+                    app:layout_constraintTop_toBottomOf="@id/elmaTek"/>
+                <ImageView
+                    android:id="@+id/isikarmut"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/armutText"
+                    app:layout_constraintLeft_toLeftOf="@+id/armutTek"
+                    app:layout_constraintStart_toStartOf="@+id/armutTek" />
+                <ImageView
+                    android:id="@+id/armutsign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/armut"
+                    app:layout_constraintBottom_toBottomOf="@+id/armutText"
+                    app:layout_constraintStart_toStartOf="@+id/armutTek" />
+                <ImageView
+                    android:id="@+id/esitarmutsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:tint="@color/hareket"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/armutText"
+                    app:layout_constraintStart_toStartOf="@+id/armutTek" />
+                <TextView
+                    android:id="@+id/armutText"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/trkids"
+                    android:background="@color/translucent"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/armutTek"
+                    app:layout_constraintStart_toStartOf="@+id/armutTek"
+                    app:layout_constraintTop_toTopOf="@+id/armutTek"
+                    android:text="0"
+                    />
+                <ImageView
+                    android:id="@+id/portakalTek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/degisken"
+                    app:layout_constraintTop_toBottomOf="@id/armutTek"/>
+                <ImageView
+                    android:id="@+id/isikportakal"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/portakalText"
+                    app:layout_constraintLeft_toLeftOf="@+id/portakalTek"
+                    app:layout_constraintStart_toStartOf="@+id/portakalTek" />
+                <ImageView
+                    android:id="@+id/portakalsign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/portakal"
+                    app:layout_constraintBottom_toBottomOf="@+id/portakalText"
+                    app:layout_constraintStart_toStartOf="@+id/armutTek" />
+                <ImageView
+                    android:id="@+id/esitportakalsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginBottom="2dp"
+                    android:tint="@color/hareket"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/portakalText"
+                    app:layout_constraintStart_toStartOf="@+id/portakalTek" />
+                <TextView
+                    android:id="@+id/portakalText"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/translucent"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/portakalTek"
+                    app:layout_constraintStart_toStartOf="@+id/portakalTek"
+                    app:layout_constraintTop_toTopOf="@+id/portakalTek"
+                    android:text="0"
+                    />
+                <ImageView
+                    android:id="@+id/muzTek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/degisken"
+                    app:layout_constraintTop_toBottomOf="@id/portakalTek"/>
+                <ImageView
+                    android:id="@+id/isikmuz"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/muzText"
+                    app:layout_constraintLeft_toLeftOf="@+id/muzTek"
+                    app:layout_constraintStart_toStartOf="@+id/muzTek" />
+                <ImageView
+                    android:id="@+id/muzsign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/muz"
+                    app:layout_constraintBottom_toBottomOf="@+id/muzText"
+                    app:layout_constraintStart_toStartOf="@+id/muzTek" />
+                <ImageView
+                    android:id="@+id/esitmuzlsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:tint="@color/hareket"
+                    android:layout_marginStart="63dp"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/muzText"
+                    app:layout_constraintStart_toStartOf="@+id/muzTek" />
+                <TextView
+                    android:id="@+id/muzText"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/trkids"
+                    android:background="@color/translucent"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/muzTek"
+                    app:layout_constraintStart_toStartOf="@+id/muzTek"
+                    app:layout_constraintTop_toTopOf="@+id/muzTek"
+                    android:text="0"
+                    />
+                <ImageView
+                    android:id="@+id/seftaliTek"
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:layout_marginTop="20dp"
+                    android:foregroundGravity="left"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/degisken"
+                    app:layout_constraintTop_toBottomOf="@id/muzTek"/>
+                <ImageView
+                    android:id="@+id/isikseftali"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginBottom="2.5dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/kirmiziisik"
+                    app:layout_constraintBottom_toBottomOf="@+id/seftaliText"
+                    app:layout_constraintLeft_toLeftOf="@+id/seftaliTek"
+                    app:layout_constraintStart_toStartOf="@+id/seftaliTek" />
+                <ImageView
+                    android:id="@+id/seftalisign"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="1dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/seftali"
+                    app:layout_constraintBottom_toBottomOf="@+id/seftaliText"
+                    app:layout_constraintStart_toStartOf="@+id/seftaliTek" />
+                <ImageView
+                    android:id="@+id/esitseftalilsign"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginStart="63dp"
+                    android:tint="@color/hareket"
+                    android:layout_marginBottom="2dp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/translucent"
+                    android:src="@drawable/esit"
+                    app:layout_constraintBottom_toBottomOf="@+id/seftaliText"
+                    app:layout_constraintStart_toStartOf="@+id/seftaliTek" />
+                <TextView
+                    android:id="@+id/seftaliText"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/translucent"
+                    android:fontFamily="@font/trkids"
+                    android:textColor="@color/white"
+                    android:gravity="center_horizontal"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/seftaliTek"
+                    app:layout_constraintStart_toStartOf="@+id/seftaliTek"
+                    app:layout_constraintTop_toTopOf="@+id/seftaliTek"
+                    android:text="0"
+                    />
+            </android.support.constraint.ConstraintLayout>
+
+        </ScrollView><!--Değişken-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_margin="10dp"
+            android:background="@color/background"
+            android:clickable="true"
+            android:paddingTop="8dp"
+            android:elevation="1dp"
+            android:focusable="true"
+            android:tint="#ffffff"
+            app:borderWidth="0dp"
+            app:layout_constraintEnd_toEndOf="@id/frameLayout2"
+            app:layout_constraintTop_toTopOf="@+id/scrollHareket"
+            app:pressedTranslationZ="10dp"
+            app:srcCompat="@drawable/game" /><!--Joystick Button-->
+        <ImageView
+            android:id="@+id/pencil"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:paddingTop="8dp"
+            app:layout_constraintEnd_toEndOf="@id/frameLayout2"
+            app:layout_constraintTop_toTopOf="@+id/scrollHareket"
+            app:srcCompat="@drawable/kalem" /><!--Kalem-->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:tint="@color/background"
+            android:background="@color/translucent"
+            android:src="@drawable/logo2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" /><!--Firma Logo-->
+    </android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/connectionImage"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="290dp"
+        android:tint="@color/background"
+        android:clickable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/audio"
+        app:srcCompat="@drawable/disconnected"
+        tools:foreground="@color/background" /><!--Bağlantı Durumu İşareti-->
+    <ProgressBar
+        android:id="@+id/progressBarBt"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:theme="@style/ProgressBarColor"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="278dp"
+        app:layout_constraintTop_toBottomOf="@id/connectionImage"
+        /><!--Bağlantı Progress Bar-->
+</FrameLayout>

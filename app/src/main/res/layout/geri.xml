@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/geri"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/hareket" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGeri"
+        app:layout_constraintLeft_toLeftOf="@+id/geri"
+        app:layout_constraintStart_toStartOf="@+id/geri" />
+    <ImageView
+        android:id="@+id/backwardsign"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGeri"
+        app:layout_constraintStart_toStartOf="@+id/geri" />
+    <TextView
+        android:id="@+id/txtGeri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/geri"
+        android:textSize="13sp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/trkids"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/geri"
+        app:layout_constraintEnd_toEndOf="@+id/geri"
+        app:layout_constraintStart_toStartOf="@+id/geri"
+        app:layout_constraintTop_toTopOf="@+id/geri" />
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

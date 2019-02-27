@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/adetElma1"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:scaleType="fitStart"
+        android:src="@drawable/adet"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="7dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+        app:layout_constraintLeft_toLeftOf="@+id/adetElma1"
+        app:layout_constraintStart_toStartOf="@+id/adetElma1" />
+    <ImageView
+        android:id="@+id/deg1"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="3dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/elma"
+        app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+        app:layout_constraintStart_toStartOf="@+id/adetElma1"
+        app:layout_constraintTop_toTopOf="@+id/adetElma1" />
+
+    <TextView
+        android:id="@+id/txtAdetElma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="1dp"
+        android:text="@string/defa"
+        android:fontFamily="@font/trkids"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/adetElma1"
+        app:layout_constraintStart_toStartOf="@+id/adetElma1"
+        app:layout_constraintTop_toTopOf="@+id/adetElma1" />
+
+
+</android.support.constraint.ConstraintLayout>

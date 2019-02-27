@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/fonksiyon"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/fonksiyon" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="2.5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFonksiyon"
+        app:layout_constraintLeft_toLeftOf="@+id/fonksiyon"
+        app:layout_constraintStart_toStartOf="@+id/fonksiyon" />
+    <ImageView
+        android:id="@+id/founctionsign"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="25dp"
+        android:paddingTop="4dp"
+        android:adjustViewBounds="true"
+        android:tint="@color/dongu"
+        android:background="@color/translucent"
+        android:src="@drawable/fx"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFonksiyon"
+        app:layout_constraintStart_toStartOf="@+id/fonksiyon" />
+    <TextView
+        android:id="@+id/txtFonksiyon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/trkids"
+        android:text="@string/fonksiyon"
+        android:textColor="@color/white"
+        android:layout_marginStart="40dp"
+        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fonksiyon"
+        app:layout_constraintEnd_toEndOf="@+id/fonksiyon"
+        app:layout_constraintStart_toStartOf="@+id/fonksiyon"
+        app:layout_constraintTop_toTopOf="@+id/fonksiyon" />
+
+</android.support.constraint.ConstraintLayout>

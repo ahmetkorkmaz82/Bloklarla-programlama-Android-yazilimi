@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/degsayitosayi"
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="left"
+        android:gravity="center_vertical"
+        android:src="@drawable/matematik" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginBottom="3dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/degText2sayitosayi"
+        app:layout_constraintLeft_toLeftOf="@+id/degsayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi" />
+    <ImageView
+        android:id="@+id/anadegsayitosayi"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="1dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/elma"
+        app:layout_constraintBottom_toBottomOf="@+id/degText2sayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi" />
+    <ImageView
+        android:id="@+id/esitsignsayitosayi"
+        android:layout_width="13dp"
+        android:layout_height="13dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginBottom="2dp"
+        android:tint="@color/hareket"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/esit"
+        app:layout_constraintBottom_toBottomOf="@+id/degText2sayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi" />
+    <TextView
+        android:id="@+id/degTextsayitosayi"
+        android:layout_width="20dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginBottom="8dp"
+        android:paddingTop="3dp"
+        android:fontFamily="@font/trkids"
+        android:background="@color/translucent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:text="0"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/degsayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi"
+        />
+    <ImageView
+        android:id="@+id/isaretsayitosayi"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="2dp"
+        android:tint="@color/hareket"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/arti"
+        app:layout_constraintBottom_toBottomOf="@+id/degText2sayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi" />
+    <TextView
+        android:id="@+id/degText2sayitosayi"
+        android:layout_width="20dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/translucent"
+        android:gravity="center_horizontal"
+        android:paddingTop="3dp"
+        android:fontFamily="@font/trkids"
+        android:textColor="@color/white"
+        android:text="0"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/degsayitosayi"
+        app:layout_constraintStart_toStartOf="@+id/degsayitosayi"
+        app:layout_constraintTop_toTopOf="@+id/degsayitosayi"
+        />
+
+</android.support.constraint.ConstraintLayout>

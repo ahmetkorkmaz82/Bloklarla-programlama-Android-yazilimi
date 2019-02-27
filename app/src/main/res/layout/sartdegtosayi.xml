@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/sartdegtosayi1"
+        android:layout_width="110dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:foregroundGravity="top"
+        android:gravity="top"
+        android:src="@drawable/sart1kopya" />
+    <ImageView
+        android:id="@+id/isik"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="7dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/kirmiziisik"
+        app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+        app:layout_constraintLeft_toLeftOf="@+id/sartdegtosayi1"
+        app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+    <ImageView
+        android:id="@+id/anaDegToSayi"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="5dp"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/elma"
+        app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+        app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+    <ImageView
+        android:id="@+id/signdegtosayi"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginBottom="5dp"
+        android:tint="@color/white"
+        android:adjustViewBounds="true"
+        android:background="@color/translucent"
+        android:src="@drawable/esit"
+        app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+        app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+    <TextView
+        android:id="@+id/txDegSayiKarsilastir"
+        android:layout_width="20dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginBottom="2dp"
+        android:paddingTop="1dp"
+        android:fontFamily="@font/trkids"
+        android:background="@color/translucent"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:text="0"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+        app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1"/>
+    <ImageView
+        android:id="@+id/sartdegtosayiBoolean"
+        android:layout_width="16dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="93.5dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tik"
+        app:layout_constraintBottom_toBottomOf="@+id/sartdegtosayi1"
+        app:layout_constraintLeft_toLeftOf="@+id/sartdegtosayi1"
+        app:layout_constraintStart_toStartOf="@+id/sartdegtosayi1" />
+
+</android.support.constraint.ConstraintLayout>
