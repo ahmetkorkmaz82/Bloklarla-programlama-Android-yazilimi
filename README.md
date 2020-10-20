@@ -1,7 +1,7 @@
 Kodlamayı eğlenceli bir şekilde öğretme amacı ile Android cihazdan Arduino tabanlı robotu blok programlama ile kontrol etmek için yazılmıştır. 
 küçük bir video:
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](www.youtube.com/embed/Ttl0oo9MkJE)
+[![Alt text](https://i.ytimg.com/vi/Ttl0oo9MkJE/maxresdefault.jpg)](www.youtube.com/embed/Ttl0oo9MkJE)
 
 
 
